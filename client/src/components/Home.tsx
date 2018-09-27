@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
+import Navbar from './Navbar';
 
 type State = {
 }
@@ -17,6 +16,7 @@ export default class Home extends React.Component<Props, State> {
     render() {
         return (
             <div>
+                <Navbar/>
             </div>
         )
     }

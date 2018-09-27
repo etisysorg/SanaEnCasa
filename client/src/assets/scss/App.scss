@@ -13,72 +13,15 @@ $border-color: red;
   }
 }
 
-body {
-  font-size: 15px;
-  padding-bottom: 100px;
+#navBackground {
+  color: black;
 }
 
-label {
-  line-height: 0.1;
+#navTitle {
+  font-size: 30px;
 }
 
-small {
-  line-height: 1;
-}
-
-.white {
-  color: white;
-}
-
-.headPC {
-  margin-top: 10px;
-}
-
-.computerImage {
-  width: 150px;
-  transition: 0.3s;
-}
-
-.computerImage:hover {
-  transform: scale(1.12);
-  cursor: pointer;
-}
-
-.form-group {
-  margin-bottom: 0.5rem;
-}
-
-.ReactTable {
-  font-size: 16px;
-  line-height: 0.8;
-}
-
-.rt-resizable-header-content {
-  font-weight: bold;
-}
-
-.-pagination {
-  height: 47px;
-}
-
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-}
-
-.inputStyle {
-  height: 30px;
-}
-
-.-headerGroups {
-  height: 5px;
-}
-
-#homeIcon {
-  font-size: 25px;
+.nav-item {
+  padding-right: 10px;
+  font-size: 19px;
 }
