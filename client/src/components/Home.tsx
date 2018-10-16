@@ -1,5 +1,8 @@
 import * as React from 'react'
-import Navbar from './Navbar';
+import NavbarC from './NavbarC'
+import Banner from './Banner'
+import Nosotros from './Nosotros'
+import Quehacemos from './Quehacemos'
 
 type State = {
 }
@@ -16,7 +19,10 @@ export default class Home extends React.Component<Props, State> {
     render() {
         return (
             <div>
-                <Navbar/>
+                <NavbarC />
+                <Banner />
+                <Nosotros />
+                <Quehacemos/>
             </div>
         )
     }
