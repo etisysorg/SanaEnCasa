@@ -3,6 +3,11 @@ import NavbarC from './NavbarC'
 import Banner from './Banner'
 import Nosotros from './Nosotros'
 import Quehacemos from './Quehacemos'
+import Equipos from './Equipos'
+import ComoAyudar from './ComoAyudar'
+import Testimonios from './Testimonios'
+import Contacto from './Contacto'
+
 
 type State = {
 }
@@ -23,6 +28,10 @@ export default class Home extends React.Component<Props, State> {
                 <Banner />
                 <Nosotros />
                 <Quehacemos/>
+                <ComoAyudar />
+                <Equipos />
+                <Testimonios/>
+                <Contacto/>
             </div>
         )
     }

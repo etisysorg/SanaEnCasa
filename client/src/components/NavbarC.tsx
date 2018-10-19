@@ -38,7 +38,7 @@ export default class NavbarC extends React.Component<Props, State> {
     render() {
         return (
             <div>
-                <Navbar style={{ backgroundColor: 'rgba(0,0,0,.04)' }} light expand='md'>
+                <Navbar style={{ backgroundColor: 'rgba(0,0,0,.08)' }} light expand='md'>
                     <NavbarBrand style={{ fontFamily: 'Montserrat', fontWeight: 'bold', color: '#2905a1' }}  href='/'>SANA EN CASA</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
@@ -49,11 +49,11 @@ export default class NavbarC extends React.Component<Props, State> {
                             <NavItem>
                                 <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>QUE HACEMOS</NavLink>
                             </NavItem>
+                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>COMO AYUDAR</NavLink>
                             <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>EQUIPOS</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>COMO AYUDAR</NavLink>
+                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>EQUIPOS</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>TESTIMONIOS</NavLink>

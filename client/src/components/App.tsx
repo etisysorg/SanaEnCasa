@@ -1,6 +1,8 @@
 import * as React from 'react'
 import './../assets/scss/App.scss'
+import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
+
 
 
 type State = {
@@ -9,6 +11,14 @@ type State = {
 
 type Props = {
 }
+
+const Main = () => (
+  <main>
+    <Switch>
+      <Route exact path='/' component={Home} />
+    </Switch>
+  </main>
+)
 
 export default class App extends React.Component<Props, State> {
 
@@ -25,7 +35,7 @@ export default class App extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <Home />
+        <Main />
       </div>
     )
   }
