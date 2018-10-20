@@ -38,7 +38,7 @@ export default class NavbarC extends React.Component<Props, State> {
     render() {
         return (
             <div>
-                <Navbar style={{ backgroundColor: 'rgba(0,0,0,.08)' }} light expand='md'>
+                <Navbar style={{ backgroundColor: 'rgba(0,0,0,.1)' }} light expand='md'>
                     <NavbarBrand style={{ fontFamily: 'Montserrat', fontWeight: 'bold', color: '#2905a1' }}  href='/'>SANA EN CASA</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
