@@ -13,10 +13,6 @@ $border-color: red;
   }
 }
 
-#navBackground {
-  color: black;
-}
-
 #navTitle {
   font-size: 30px;
 }
@@ -121,4 +117,31 @@ header.masthead {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
+}
+
+.imgGrid {
+  width: 300px;
+  height: 201.32px;
+  border-radius: 7px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+#navBackground {
+  background-color: rgba(0, 0, 0, 0.88);
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.navItems {
+  color: white;
+  font-size: 14px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navItems:hover {
+  text-decoration: none;
+  color: #009ce0;
 }

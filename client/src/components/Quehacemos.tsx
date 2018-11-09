@@ -28,6 +28,9 @@ export default class Quehacemos extends React.Component<Props, State> {
                         <div className='col-md-4 text-center'>
                             <i style={{ color: '#009ce0', fontSize: '50px', paddingBottom: '10px' }} className='fas fa-wheelchair'></i>
                             <h3 style={{ color: '#009ce0', fontFamily: 'Montserrat', fontWeight: 'bold' }} className='text-center'>Pañales para adulto</h3>
+                            <h5 className='text-center' style={{ color: '#009ce0', lineHeight: '1.4' }}>
+                                Sana en Casa cuenta con un banco de pañales para apoyar a los más necesitados, que  tienen a un enfermo en casa
+                            </h5>
                         </div>
                         <div className='col-md-4 text-center'>
                             <i style={{ color: '#009ce0', fontSize: '50px', paddingBottom: '10px' }} className='fas fa-ambulance'></i>

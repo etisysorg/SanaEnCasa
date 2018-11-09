@@ -34,6 +34,9 @@ export default class Nosotros extends React.Component<Props, State> {
                     <div className='col-md-4 text-center'>
                         <span style={{ color: 'white', fontSize: '50px', paddingBottom: '10px' }} className='fas fa-cross'></span>
                         <h2 style={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 'bold' }} className='text-center'>Valores</h2>
+                        <h5 className='text-center' style={{ color: 'white', lineHeight: '1.4' }}>
+                            CARIDAD para los más necesitados, SOLIDARIO ante las difíciles situaciones, IGUALDAD para brindar apoyo a quien más lo necesite y buscando siempre la TRASPARENCIA en sus actividades
+                        </h5>
                     </div>
                 </div>
             </div>

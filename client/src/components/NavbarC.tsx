@@ -1,17 +1,4 @@
 import * as React from 'react'
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-} from 'reactstrap'
 
 type State = {
     isOpen: boolean
@@ -37,33 +24,36 @@ export default class NavbarC extends React.Component<Props, State> {
 
     render() {
         return (
-            <div>
-                <Navbar style={{ backgroundColor: 'rgba(0,0,0,.1)' }} light expand='md'>
-                    <NavbarBrand style={{ fontFamily: 'Montserrat', fontWeight: 'bold', color: '#2905a1' }}  href='/'>SANA EN CASA</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className='ml-auto' navbar>
-                            <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='/components/'>NOSOTROS</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>QUE HACEMOS</NavLink>
-                            </NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>COMO AYUDAR</NavLink>
-                            <NavItem>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>EQUIPOS</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>TESTIMONIOS</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className='navbarItem' style={{ fontFamily: 'Montserrat', fontWeight: 'bold', fontSize: '15px' }} href='https://github.com/reactstrap/reactstrap'>CONTACTO</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
+            <div className='Navbar'>
+                <nav id='navBackground' className='navbar navbar-expand-lg navbar-dark fixed-top'>
+                    <a className='text-uppercase navItem' href='#top'>sana en casa</a>
+                    <button id='buttonCollapse' className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+                        <span className='navbar-toggler-icon'></span>
+                    </button>
+
+                    <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+                        <ul className='navbar-nav ml-auto'>
+                            <li className='nav-item'>
+                                <a style={{fontFamily: 'Montserrat'}} className='navItems text-uppercase' href='#blockOne'>Nosotros</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a style={{fontFamily: 'Montserrat'}} className='navItems text-uppercase' href='#blockTwo'>¿Qué hacemos?</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a style={{fontFamily: 'Montserrat'}} className='navItems text-uppercase' href='#block3'>¿Cómo ayudar?</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a style={{fontFamily: 'Montserrat'}} className='navItems text-uppercase' href='#block3'>Equipo médico</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a style={{fontFamily: 'Montserrat'}} className='navItems text-uppercase' href='#block3'>Testimonios</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a style={{fontFamily: 'Montserrat'}} className='navItems text-uppercase' href='#block3'>Contáctanos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         )
     }
