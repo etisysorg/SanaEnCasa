@@ -14,7 +14,7 @@ export default class Home extends React.Component<Props, State> {
 
     render() {
         return (
-            <div className='contacto'>
+            <div id='contactanos' className='contacto'>
                 <h1 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '20px' }} className='text-center'>CONTÁCTANOS</h1>
                 <div className='row'>
                     <div className='col-md-4 text-center'>

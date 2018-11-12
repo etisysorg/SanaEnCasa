@@ -22,7 +22,7 @@ export default class Home extends React.Component<Props, State> {
 
     render() {
         return (
-            <div className='equipos'>
+            <div id='equipoMedico' className='equipos'>
                 <h1 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold' }} className='text-center'>EQUIPO MÉDICO</h1>
                 <div style={{ paddingLeft: '40px', paddingRight: '40px' }} className='row'>
                     <div className='col-md-4 text-center'>

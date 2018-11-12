@@ -14,7 +14,7 @@ export default class Nosotros extends React.Component<Props, State> {
 
     render() {
         return (
-            <div id='blockOne' className='nostros text-center'>
+            <div id='nosotros' className='nostros text-center'>
                 <h1 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '20px' }} className='text-center'>NOSOTROS</h1>
                 <div className='row'>
                     <div className='col-md-4 text-center'>

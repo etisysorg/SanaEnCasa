@@ -23,7 +23,7 @@ export default class Home extends React.Component<Props, State> {
 
     render() {
         return (
-            <div>
+            <div id='home'>
                 <NavbarC />
                 <Banner />
                 <Nosotros />

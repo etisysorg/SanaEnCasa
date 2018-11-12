@@ -14,6 +14,11 @@ $border-color: red;
 }
 
 body {
+  transition: 0.5s;
+  -webkit-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  animation: fadein 1s;
 }
 
 #navTitle {
@@ -41,8 +46,8 @@ header.masthead {
   position: relative;
   background: url(../img/banner4.jpeg) no-repeat center center;
   background-size: cover;
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 13rem;
+  padding-bottom: 16rem;
 }
 
 .overlay {
@@ -147,4 +152,9 @@ header.masthead {
 .navItems:hover {
   text-decoration: none;
   color: #009ce0;
+}
+
+#logoHeader {
+  width: 120px;
+  height: 55px;
 }

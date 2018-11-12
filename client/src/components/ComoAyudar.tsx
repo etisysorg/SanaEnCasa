@@ -14,7 +14,7 @@ export default class ComoAyudar extends React.Component<Props, State> {
 
     render() {
         return (
-            <div className='comoAyudar'>
+            <div id='comoAyudar' className='comoAyudar'>
                 <h1 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>COMO AYUDAR</h1>
                 <hr />
                 <h2 style={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Donativo de equipo nuevo o usado</h2>
