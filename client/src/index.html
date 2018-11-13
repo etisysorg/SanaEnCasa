@@ -44,11 +44,11 @@
                             // Must change focus!
                             var $target = $(target);
                             $target.focus();
-                            if ($target.is(":focus")) { // Checking if the target was focused
+                            if ($target.is(":focus") - 80) { // Checking if the target was focused
                                 return false;
                             } else {
                                 $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                                $target.focus(); // Set focus again
+                                $target.focus() - 80; // Set focus again
                             };
                         });
                     }
