@@ -24,33 +24,33 @@ export default class Home extends React.Component<Props, State> {
         return (
             <div id='equipoMedico' className='equipos'>
                 <h1 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold' }} className='text-center'>EQUIPO MÉDICO</h1>
-                <div style={{ paddingLeft: '40px', paddingRight: '40px' }} className='row'>
-                    <div className='col-md-4 text-center'>
-                        <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Cama de hosital</h4>
-                        <img className='imgGrid' src={camaDeHospital} alt=''/>
+                <div className='row'>
+                    <div className='col-lg-4 text-center'>
+                        <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Cama de hospital</h4>
+                        <img className='imgGrid' src={camaDeHospital} alt='' />
                     </div>
-                    <div className='col-md-4 text-center'>
+                    <div className='col-lg-4 text-center'>
                         <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Colchón antillagas</h4>
-                        <img className='imgGrid' src={colchonAntillagas} alt=''/>
+                        <img className='imgGrid' src={colchonAntillagas} alt='' />
                     </div>
-                    <div className='col-md-4 text-center'>
+                    <div className='col-lg-4 text-center'>
                         <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Silla de ruedas</h4>
-                        <img className='imgGrid' src={sillaDeRuedas} alt=''/>
+                        <img className='imgGrid' src={sillaDeRuedas} alt='' />
                     </div>
                 </div>
 
-                <div style={{ paddingLeft: '40px', paddingRight: '40px' }} className='row'>
-                    <div className='col-md-4 text-center'>
+                <div style={{}} className='row'>
+                    <div className='col-lg-4 text-center'>
                         <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Grúa elevapacientes</h4>
-                        <img className='imgGrid' src={gruaElevapaciente} alt=''/>
+                        <img className='imgGrid' src={gruaElevapaciente} alt='' />
                     </div>
-                    <div className='col-md-4 text-center'>
+                    <div className='col-lg-4 text-center'>
                         <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Aspirador de secreciones</h4>
-                        <img className='imgGrid' src={aspiradorDeSecreciones} alt=''/>
+                        <img className='imgGrid' src={aspiradorDeSecreciones} alt='' />
                     </div>
-                    <div className='col-md-4 text-center'>
+                    <div className='col-lg-4 text-center'>
                         <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Andadores</h4>
-                        <img className='imgGrid' src={andadora} alt=''/>
+                        <img className='imgGrid' src={andadora} alt='' />
                     </div>
                 </div>
             </div>
