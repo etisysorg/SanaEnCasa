@@ -32,7 +32,7 @@ export default class Nosotros extends React.Component<Props, State> {
                 <div className='row'>
                     <div className='col-md-8'>
                         <h3 className='text-center' style={{ paddingLeft: '40px', paddingRight: '40px', color: 'white', lineHeight: '1.5', paddingBottom: '30px', paddingTop: '20px' }}>
-                            Principalmente prestamos: camas de hospital, sillas de ruedas, grúas eleva pacientes, asppiradores de secreciones y algunos otros equipos
+                            Principalmente prestamos: camas de hospital, sillas de ruedas, grúas eleva pacientes, aspiradores de secreciones y algunos otros equipos
                         </h3>
                     </div>
                     <div className='col-md-4'>
@@ -52,7 +52,7 @@ export default class Nosotros extends React.Component<Props, State> {
                         <img style={{ width: '65px', paddingLeft: '10px', paddingBottom: '10px' }} className='text-center' src={mision} alt=''/>
                         <h2 style={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 'bold' }} className='text-center'>Visión</h2>
                         <h5 className='text-center' style={{ color: 'white', lineHeight: '1.4' }}>
-                            Llegar a ser una Asociación con una sólida estructura organizacional que se mantenga en constante crecimiento y que proporcione apoyo a un cada vez un mayor número de familias
+                            Llegar a ser una asociación con una sólida estructura organizacional que se mantenga en constante crecimiento y que proporcione apoyo cada vez a un mayor numero de familias
                         </h5>
                     </div>
                     <div className='col-md-4 text-center'>

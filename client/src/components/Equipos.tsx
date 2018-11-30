@@ -51,9 +51,9 @@ export default class Home extends React.Component<Props, State> {
                         <div style={{ height: '210px' }} className='imgWrap'>
                             <img className='imgGrid' src={sillaDeRuedas} alt='' />
                             <h4 style={{ color: '#009ce0', fontFamily: 'Montserrat', paddingTop: '5px' }} className='text-center imgDescription'>
-                                Una silla de ruedas que se adapta a las necesidades del paciente, le
-                                estas pueden ser: ligera si se trasladan a
-                                consultas, firme, compacta, con llantas grandes y brazos abatibles, para pacientes que
+                                Una silla de ruedas que se adapta a las necesidades del paciente,
+                                estas pueden ser: ligeras si se trasladan a
+                                consultas, firmes, compactas, con llantas grandes y brazos abatibles, para pacientes que
                                 pueden mover sus brazos, sillas especiales PCI
                             </h4>
                         </div>
