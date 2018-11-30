@@ -27,15 +27,18 @@ export default class ComoAyudar extends React.Component<Props, State> {
                     </div>
                     <div className='col-md-4'>
                         <i style={{ fontSize: '50px', color: 'white', paddingTop: '10px', paddingBottom: '10px' }} className='fas fa-hands-helping text-center'></i>
-                        <h2 style={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Donativo de equipo nuevo o usado</h2>
+                        <h2 style={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Donativo de equipo</h2>
                         <h4 style={{ color: 'white', fontSize: '20px', lineHeight: '1.4' }} className='text-center'>
                             Si tienes un equipo usado,  guardado, ¡hay muchas familias que pueden usarlo! Te mantendremos informado del destino final de tu donativo. Puedes acompañar al personal de Sana en casa
-                            a entregarlo a la familia que lo recibirá.
+                            a entregarlo a la familia que lo recibirá
                         </h4>
                     </div>
                     <div className='col-md-4'>
                         <i style={{ fontSize: '50px', color: 'white', paddingTop: '10px', paddingBottom: '10px' }} className='fas fa-building text-center'></i>
                         <h2 style={{ color: 'white', fontFamily: 'Montserrat', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'>Empresas</h2>
+                        <h4 style={{ color: 'white', fontSize: '20px', lineHeight: '1.4' }} className='text-center'>
+                            Si tu empresa desea ser Socialmente responsable, Sana En Casa es ¡tu mejor opción! Te damos recibo deducible de impuestos y puedes estar seguro de que tu donativo será utilizado con total trasparencia
+                        </h4>
                     </div>
                 </div>
             </div>
