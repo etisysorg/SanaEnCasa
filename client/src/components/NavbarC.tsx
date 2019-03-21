@@ -1,7 +1,8 @@
 import * as React from 'react'
 const logo = require('./../assets/img/logoNavbar.png')
 const pdf1 = require('./../assets/img/BoletinSep2018.pdf')
-const pdf2 = require('./../assets/img/BoletinMarzo2019.pdf')
+const pdf2 = require('./../assets/img/BoletinDiciembre2018.pdf')
+const pdf3 = require('./../assets/img/BoletinMarzo2019.pdf')
 
 type State = {
     isOpen: boolean
@@ -60,7 +61,8 @@ export default class NavbarC extends React.Component<Props, State> {
                                 </a>
                                 <div className='dropdown-menu' aria-labelledby='navbarDropdown'>
                                     <a target='_blank' className='dropdown-item' href={pdf1}>SEP 2018</a>
-                                    <a target='_blanck' className='dropdown-item' href={ pdf2 }>MARZO 2019</a>
+                                    <a target='_blank' className='dropdown-item' href={ pdf2 }>DIC 2018</a>
+                                    <a target='_blank' className='dropdown-item' href= { pdf3 }>MARZO 2019</a>
                                 </div>
                             </li>
                         </ul>
