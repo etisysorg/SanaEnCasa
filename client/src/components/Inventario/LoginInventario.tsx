@@ -1,5 +1,8 @@
 import * as React from 'react'
 import NavbarInventario from './NavbarInventario'
+import UserStorage from './../shared/localStorageFunctions.ts'
+import CapturaInventario from './CapturaInventario'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 
 type State = {
@@ -42,12 +45,21 @@ export default class LoginInventario extends React.Component<Props, State> {
         .then(function(myJson) {
             console.log(myJson)
             if (myJson) {
-                // validate login
+                localStorage.setItem('loggedIn', 'true')
+                window.location.reload(true)
+            } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Usuario o Clave incorrecta',
+                })
             }
         })
     }
 
     render() {
+        if (localStorage.getItem('loggedIn') === 'true') {
+            return <CapturaInventario />
+        }
         return (
             <div>
                 <NavbarInventario />

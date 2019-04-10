@@ -13,6 +13,11 @@ export default class NavbarInventario extends React.Component<Props, State> {
         super(props)
     }
 
+    cerrarSesion = (event) => {
+        localStorage.setItem('loggedIn', 'false')
+        window.location.reload(true)
+    }
+
     render() {
         return (
             <div>
@@ -24,7 +29,7 @@ export default class NavbarInventario extends React.Component<Props, State> {
                     <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                         <ul className='navbar-nav ml-auto'>
                             <li className='nav-item'>
-                                <a style={{ fontFamily: 'Montserrat' }} className='navItems text-uppercase' href='#'>Cerrar Sesión</a>
+                                <button onClick={this.cerrarSesion} style={{ fontFamily: 'Montserrat', backgroundColor: 'none' }} className='navItems text-uppercase btn btn-link'>Cerrar Sesión</button>
                             </li>
                         </ul>
                     </div>
