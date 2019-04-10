@@ -2,7 +2,7 @@ import * as React from 'react'
 import NavbarInventario from './NavbarInventario'
 import UserStorage from './../shared/localStorageFunctions.ts'
 import CapturaInventario from './CapturaInventario'
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2'
 
 
 type State = {
@@ -42,10 +42,16 @@ export default class LoginInventario extends React.Component<Props, State> {
         .then(function(response) {
             return response.json()
         })
-        .then(function(myJson) {
+        .then( async function(myJson) {
             console.log(myJson)
             if (myJson) {
                 localStorage.setItem('loggedIn', 'true')
+                await Swal.fire({
+                    type: 'success',
+                    title: 'inicio de sesion correcto',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
                 window.location.reload(true)
             } else {
             Swal.fire({
