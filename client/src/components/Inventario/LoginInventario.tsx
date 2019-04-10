@@ -1,6 +1,5 @@
 import * as React from 'react'
 import NavbarInventario from './NavbarInventario'
-import UserStorage from './../shared/localStorageFunctions.ts'
 import CapturaInventario from './CapturaInventario'
 import Swal from 'sweetalert2'
 
