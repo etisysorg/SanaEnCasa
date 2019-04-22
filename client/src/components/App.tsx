@@ -3,6 +3,8 @@ import './../assets/scss/App.scss'
 import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import LoginInventario from './Inventario/loginInventario'
+import CapturaEquipoMedico from './Inventario/CapturaEquipoMedico'
+import CapturaPacientes from './Inventario/CapturaPacientes'
 
 
 
@@ -18,6 +20,8 @@ const Main = () => (
     <Switch>
       <Route exact path='/' component={ Home } />
       <Route path='/inventario' component={ LoginInventario } />
+      <Route path='/equipoMedico' component={ CapturaEquipoMedico } />
+      <Route path='/pacientes' component={ CapturaPacientes } />
     </Switch>
   </main>
 )

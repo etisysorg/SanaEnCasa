@@ -1,6 +1,7 @@
 import * as React from 'react'
 import NavbarInventario from './NavbarInventario'
 import CapturaEquipoMedico from './CapturaEquipoMedico'
+import HomeInventario from './HomeInventario'
 import Swal from 'sweetalert2'
 
 
@@ -63,7 +64,7 @@ export default class LoginInventario extends React.Component<Props, State> {
 
     render() {
         if (localStorage.getItem('loggedIn') === 'true') {
-            return <CapturaEquipoMedico />
+            return <HomeInventario />
         }
         return (
             <div>
