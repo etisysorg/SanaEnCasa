@@ -2,7 +2,7 @@ import * as React from 'react'
 import NavbarInventario from './NavbarInventario'
 import ReactTable, { Column } from 'react-table'
 import { EntityCapture } from '../../shared/EntityCapture'
-import { EquipoMedicoModel, EntityType } from '../../shared/DataTypes'
+import { EquipoMedicoModel, EntityType, TipoEquipoMedico } from '../../shared/DataTypes'
 import { getMatchSorterWrapper } from '../../shared/getMatchSorterWrapper'
 import { Pivot, PivotItem } from 'office-ui-fabric-react/lib/Pivot'
 import { InputWrapper } from '../../shared/InputWrapper'
@@ -34,7 +34,17 @@ export default class CapturaEquipoMedico extends EntityCapture<EquipoMedicoModel
       getEmptyEntity = (): EquipoMedicoModel => {
         return {
           id: '',
-          nombre: '',
+          codigo: 0,
+          tipoDeEquipoMedico: TipoEquipoMedico.aspiradorDeSecreciones,
+          descripcion: '',
+          caso: '',
+          donador: '',
+          factura: '',
+          fechaDeCompra: '',
+          casosAnteriores: '',
+          activo: false,
+          fechaDeBaja: '',
+          razonDeBaja: '',
         }
       }
 
@@ -50,10 +60,17 @@ export default class CapturaEquipoMedico extends EntityCapture<EquipoMedicoModel
                 filterAll: true,
               },
               {
-                Header: 'Nombre',
-                id: 'AgenteNombre',
-                accessor: (d: EquipoMedicoModel) => d.id,
-                filterMethod: getMatchSorterWrapper('id'),
+                Header: 'Codigo',
+                id: 'codigo',
+                accessor: (d: EquipoMedicoModel) => d.codigo,
+                filterMethod: getMatchSorterWrapper('codigo'),
+                filterAll: true,
+              },
+              {
+                Header: 'Donador',
+                id: 'donador',
+                accessor: (d: EquipoMedicoModel) => d.donador,
+                filterMethod: getMatchSorterWrapper('donador'),
                 filterAll: true,
               },
             ],
@@ -68,17 +85,22 @@ export default class CapturaEquipoMedico extends EntityCapture<EquipoMedicoModel
           <div>
             <div style={ { paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px' } } className='row'>
               <div className='col-3'>
-                <label htmlFor='clave'>Clave</label>
+                <label>Clave</label>
                 <InputWrapper
                   handleChangeInput={ this.createHandleChangeInput((row, val) => row.id = val) }
                   value={ currentRow.id }
                   maxLength={ 20 }
                   isClave={ true }
                   isEditing={ this.state.isEditing } />
-                <label style={ { paddingTop: '15px' } } htmlFor='Nombre'>Nombre</label>
+                <label>Codigo</label>
+                <InputWrapperNumber
+                  value={ currentRow.codigo }
+                  handleChangeInput={ this.createHandleChangeInput((row, val) => row.codigo = val) }
+                  decimalRange={ 4 } />
+                <label>Donador</label>
                 <InputWrapper
-                  handleChangeInput={ this.createHandleChangeInput((row, val) => row.id = val) }
-                  value={ currentRow.id }
+                  handleChangeInput={ this.createHandleChangeInput((row, val) => row.donador = val) }
+                  value={ currentRow.donador }
                   maxLength={ 20 }
                   isClave={ false }
                   isEditing={ this.state.isEditing } />
