@@ -77,7 +77,12 @@ export class RestApi<T> {
   }
 
   public async getEntities(): Promise<T[]> {
-      return Promise.resolve([])
+    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/get`)
+    if (response.status === 200) {
+      return await response.json()
+    }
+    const error = await RestApi.getErrorFromResponse(response)
+    throw error
   }
 
   public async addEntity(entity: T): Promise<T> {
