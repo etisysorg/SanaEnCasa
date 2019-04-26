@@ -101,6 +101,18 @@ export class RestApi<T> {
   }
 
   public async editEntity(entity: T, id: string): Promise<void> {
+    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/edit`, {
+      method: 'PUT',
+      body: JSON.stringify(entity),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    if (response.status === 202) {
+      return await response.json()
+    }
+    const error = await RestApi.getErrorFromResponse(response)
+    throw error
   }
 
   public async deleteEntity(id: string): Promise<void> {
