@@ -23,6 +23,19 @@ export default class LoginInventario extends React.Component<Props, State> {
         }
     }
 
+    hashString = (str) => {
+        let hash = 0, i, chr
+        if (str.length === 0) {
+            return hash
+        }
+        for (i = 0; i < str.length; i++) {
+          chr = str.charCodeAt(i)
+          hash = ((hash << 5) - hash) + chr
+          hash |= 0 // Convert to 32bit integer
+        }
+        return hash
+    }
+
     onChangeUsername = (event) => {
         this.setState({
             username: event.target.value
@@ -38,14 +51,15 @@ export default class LoginInventario extends React.Component<Props, State> {
     submitedLogin = (event) => {
         // aqui va logica de autenticacion
         event.preventDefault()
-        fetch(`http://localhost:3000/login/${this.state.username}/${this.state.password}`)
-        .then(function(response) {
+        let passHashed = this.hashString(this.state.password)
+        fetch(`http://localhost:3000/login/${this.state.username}/${passHashed}`)
+        .then((response) => {
             return response.json()
         })
         .then( async function(myJson) {
             console.log(myJson)
             if (myJson) {
-                localStorage.setItem('loggedIn', 'true')
+                localStorage.setItem('loggedIn', String(passHashed))
                 await Swal.fire({
                     type: 'success',
                     title: 'inicio de sesion correcto',
@@ -63,7 +77,7 @@ export default class LoginInventario extends React.Component<Props, State> {
     }
 
     render() {
-        if (localStorage.getItem('loggedIn') === 'true') {
+        if (localStorage.getItem('loggedIn') ===  String(1770759281)) {
             return <HomeInventario />
         }
         return (
