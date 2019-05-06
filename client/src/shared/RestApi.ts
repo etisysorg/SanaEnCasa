@@ -116,5 +116,17 @@ export class RestApi<T> {
   }
 
   public async deleteEntity(id: string): Promise<void> {
+    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/delete`, {
+      method: 'DELETE',
+      body: JSON.stringify({id: id}),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    if (response.status === 202) {
+      return await response.json()
+    }
+    const error = await RestApi.getErrorFromResponse(response)
+    throw error
   }
 }
