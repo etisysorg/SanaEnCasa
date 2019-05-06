@@ -19,6 +19,11 @@ body {
   -ms-animation: fadein 1s;
   -o-animation: fadein 1s;
   animation: fadein 1s;
+  padding-bottom: 18px;
+}
+
+div:focus {
+  outline: none;
 }
 
 #navTitle {
