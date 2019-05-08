@@ -6,6 +6,18 @@ const dialogDelayInMs = 1100
 export class DialogMessages {
   public static async showErrorMessage(error: Error): Promise<void> {
     if (ApiError.isApiError(error)) {
+      if (error.statusCode === 500) {
+        await this.sameKeyDialog()
+        return
+      }
+      if (error.statusCode === 501) {
+        await this.keyNotExist()
+        return
+      }
+      if (error.statusCode === 503) {
+        await this.deletingForeignKey()
+        return
+      }
       if (error.errorInfo && error.errorInfo.ErrorCode === '-2146232060' && error.errorInfo.InternalErrorMessage) {
         if (error.errorInfo.InternalErrorMessage.indexOf('duplicate key') !== -1) {
           await this.sameKeyDialog()
@@ -62,6 +74,14 @@ export class DialogMessages {
       type: 'error',
       title: 'Error de Api',
       text: 'Esta clave ya existe',
+    })
+  }
+
+  private static async deletingForeignKey() {
+    await sweetalert2.fire({
+      type: 'error',
+      title: 'Error',
+      text: 'No se puede borrar una clave referenciada en otra tabla',
     })
   }
 

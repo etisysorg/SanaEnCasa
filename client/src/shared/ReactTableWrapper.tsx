@@ -74,7 +74,7 @@ export class ReactTableWrapper<T> extends React.Component<IProps<T>, IState> {
       },
       style: {
         cursor: 'pointer',
-        background: isCurrentRowSelected && this.props.highlightSelectedRow ? '#4682B4' : 'white',
+        background: isCurrentRowSelected && this.props.highlightSelectedRow ? '#009ce0' : 'white',
         color: isCurrentRowSelected && this.props.highlightSelectedRow ? 'white' : 'black',
       },
     }

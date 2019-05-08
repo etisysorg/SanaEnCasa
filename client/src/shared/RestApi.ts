@@ -51,6 +51,9 @@ export class ApiError extends Error {
         if (apiError.errorInfo.FullErrorMessage) {
           strToPrint += apiError.errorInfo.FullErrorMessage + '\n'
         }
+        if (apiError.statusCode === 500) {
+          strToPrint += 'Clave unica repetida, favor de poner una clave correcta'
+        }
       }
     }
     return strToPrint

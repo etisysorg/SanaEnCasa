@@ -35,7 +35,6 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
   getEmptyEntity = (): PacienteModel => {
     return {
       id: '',
-      caso: '',
       fecha: '',
       nombre: '',
       edad: 0,
@@ -59,7 +58,7 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
       {
         columns: [
           {
-            Header: 'Clave',
+            Header: 'Caso',
             id: 'id',
             accessor: (d: PacienteModel) => d.id,
             filterMethod: getMatchSorterWrapper('id'),
@@ -84,7 +83,6 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
     ]
   }
 
-
   renderCaptureUi = () => {
     const currentRow: PacienteModel = this.state.currentRow || this.getEmptyEntity()
     return (
@@ -95,19 +93,12 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
               <PivotItem linkText='Datos Generales'>
                 <div style={{ paddingTop: '20px', paddingLeft: '40px', paddingRight: '40px' }} className='row'>
                   <div className='col-3'>
-                    <label>Clave</label>
+                    <label>Caso</label>
                     <InputWrapper
                       handleChangeInput={this.createHandleChangeInput((row, val) => row.id = val)}
                       value={currentRow.id}
                       maxLength={20}
                       isClave={true}
-                      isEditing={this.state.isEditing} />
-                    <label>Caso</label>
-                    <InputWrapper
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.caso = val)}
-                      value={currentRow.caso}
-                      maxLength={20}
-                      isClave={false}
                       isEditing={this.state.isEditing} />
                     <label>Padecimiento</label>
                     <InputWrapper
@@ -116,19 +107,26 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
                       maxLength={20}
                       isClave={false}
                       isEditing={this.state.isEditing} />
+                    <label>Nombre</label>
+                    <InputWrapper
+                      handleChangeInput={this.createHandleChangeInput((row, val) => row.nombre = val)}
+                      value={currentRow.nombre}
+                      maxLength={20}
+                      isClave={false}
+                      isEditing={this.state.isEditing} />
                   </div>
                   <div className='col-3'>
-                    <label>Fecha</label>
+                    <label>Fecha Ingreso</label>
                     <InputWrapper
                       handleChangeInput={this.createHandleChangeInput((row, val) => row.fecha = val)}
                       value={currentRow.fecha}
                       maxLength={20}
                       isClave={false}
                       isEditing={this.state.isEditing} />
-                    <label>Nombre</label>
+                    <label>Fecha egreso</label>
                     <InputWrapper
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.nombre = val)}
-                      value={currentRow.nombre}
+                      handleChangeInput={this.createHandleChangeInput((row, val) => row.fechaEgreso = val)}
+                      value={currentRow.fechaEgreso}
                       maxLength={20}
                       isClave={false}
                       isEditing={this.state.isEditing} />
@@ -158,17 +156,10 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
                       isEditing={this.state.isEditing} />
                   </div>
                   <div className='col-3'>
-                    <label>Fecha egreso</label>
-                    <InputWrapper
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.fechaEgreso = val)}
-                      value={currentRow.fechaEgreso}
-                      maxLength={20}
-                      isClave={false}
-                      isEditing={this.state.isEditing} />
                     <div style={{ marginTop: '25px' }}>
                       <Checkbox
                         checked={currentRow.activo}
-                        label='Extranjero'
+                        label='Activo'
                         onChange={this.createHandleChangeInput((row, _val) => row.activo = !currentRow.activo)} />
                     </div>
                   </div>

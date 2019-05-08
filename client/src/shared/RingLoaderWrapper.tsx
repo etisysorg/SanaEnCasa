@@ -18,10 +18,10 @@ export class RingLoaderWrapper extends React.Component<Props, State> {
       <div>
         <div className='text-center' style={ { width: '200px', margin: '30px auto' } }>
           <RingLoader
-            color='#4682B4'
+            color='#009ce0'
             size={ 200 } />
         </div>
-        <h1 className='text-center' style={ { color: '#4682B4', fontSize: '30px', marginTop: '20px' } }>Etisys Online</h1>
+        <h1 className='text-center' style={ { color: '#009ce0', fontSize: '30px', marginTop: '20px' } }>Inventario SanaEnCasa</h1>
       </div>
     )
   }

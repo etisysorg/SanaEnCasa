@@ -30,7 +30,6 @@ export type FormatoUsuario = {
 
 export type PacienteModel = {
     id: string,
-    caso: string,
     fecha: string,
     nombre: string,
     edad: number,
