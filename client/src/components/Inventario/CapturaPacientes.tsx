@@ -144,7 +144,9 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
                     <div className='text-center'>
                       {
                         currentRow.image64 === '' || !currentRow.image64 ?
-                          <div>empty</div> :
+                          <div style={{ width: '500px', height: '270px', border: '3px solid #009ce0', borderRadius: '8px' }}>
+                            <h5 className='text-center'>No hay imagen agregada por ahora</h5>
+                          </div> :
                           <img style={{ width: '500px', height: '270px', border: '3px solid #009ce0', borderRadius: '8px' }} src={currentRow.image64} />
                       }
                     </div>

@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 type State = {
     username: string,
-    password: string
+    password: string,
 }
 
 type Props = {
@@ -29,9 +29,9 @@ export default class LoginInventario extends React.Component<Props, State> {
             return hash
         }
         for (i = 0; i < str.length; i++) {
-          chr = str.charCodeAt(i)
-          hash = ((hash << 5) - hash) + chr
-          hash |= 0 // Convert to 32bit integer
+            chr = str.charCodeAt(i)
+            hash = ((hash << 5) - hash) + chr
+            hash |= 0 // Convert to 32bit integer
         }
         return hash
     }
@@ -48,38 +48,41 @@ export default class LoginInventario extends React.Component<Props, State> {
         })
     }
 
-    submitedLogin = (event) => {
+    submitedLogin = async (event) => {
         // aqui va logica de autenticacion
         event.preventDefault()
         let passHashed = this.hashString(this.state.password)
+        let username = this.state.username
         fetch(`http://localhost:3000/login/${this.state.username}/${passHashed}`)
-        .then((response) => {
-            return response.json()
-        })
-        .then( async function(myJson) {
-            console.log(myJson)
-            if (myJson) {
-                localStorage.setItem('loggedIn', String(passHashed))
-                await Swal.fire({
-                    type: 'success',
-                    title: 'inicio de sesion correcto',
-                    showConfirmButton: false,
-                    timer: 1000
-                })
-                window.location.reload(true)
-            } else {
-            Swal.fire({
-                type: 'error',
-                title: 'Usuario o Clave incorrecta',
-                })
-            }
-        })
+            .then((response) => {
+                return response.json()
+            })
+            .then(async function (myJson) {
+                console.log(myJson)
+                if (myJson) {
+                    localStorage.setItem('loggedIn', String(passHashed))
+                    localStorage.setItem('username', username)
+                    await Swal.fire({
+                        type: 'success',
+                        title: 'inicio de sesion correcto',
+                        showConfirmButton: false,
+                        timer: 1000
+                    })
+                    location.replace('http://localhost:8080/inventario')
+                } else {
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Usuario o Clave incorrecta',
+                    })
+                }
+            })
+    }
+
+    getPassHashedFromUser = () => {
+
     }
 
     render() {
-        if (localStorage.getItem('loggedIn') ===  String(1770759281)) {
-            return <HomeInventario />
-        }
         return (
             <div>
                 <NavbarInventario />

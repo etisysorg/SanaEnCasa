@@ -1,6 +1,7 @@
 import * as React from 'react'
 import NavbarInventario from './NavbarInventario'
 import CapturaEquipoMedico from './CapturaEquipoMedico'
+import { Link } from 'react-router-dom'
 
 const logo = require('./../../assets/img/logo.png')
 

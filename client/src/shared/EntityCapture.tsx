@@ -45,16 +45,27 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
 
   async componentDidMount() {
     // Intentionally not awaited
-    this.getForeignFullData()
-    this.restApi = new RestApi<T>(this.getEntityType())
-    try {
-      const fullData = await this.restApi.getEntities()
-      this.setState({
-        fullData: fullData,
-        currentRow: fullData && fullData.length > 0 ? fullData[0] : undefined,
-      })
-    } catch (error) {
-      await DialogMessages.showErrorMessage(error)
+    if (localStorage.getItem('username') === null) {
+      location.replace('http://localhost:8080/loginInventario')
+    }
+    const username = localStorage.getItem('username')
+    const password = localStorage.getItem('loggedIn')
+    const response = await fetch(`http://localhost:3000/verifyLogin/${username}/${password}`)
+    const json = await response.json()
+    if (json) {
+      this.getForeignFullData()
+      this.restApi = new RestApi<T>(this.getEntityType())
+      try {
+        const fullData = await this.restApi.getEntities()
+        this.setState({
+          fullData: fullData,
+          currentRow: fullData && fullData.length > 0 ? fullData[0] : undefined,
+        })
+      } catch (error) {
+        await DialogMessages.showErrorMessage(error)
+      }
+    } else {
+      location.replace('http://localhost:8080/loginInventario')
     }
   }
 
@@ -240,35 +251,35 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
 
   render() {
     if (!this.state.fullData) {
-      return ( <RingLoaderWrapper /> )
+      return (<RingLoaderWrapper />)
     }
 
     return (
       <div>
         <NavbarInventario />
-        <CapturaHeader title={ `Captura ${this.getEntitiesFriendlyName()}` } />
+        <CapturaHeader title={`Captura ${this.getEntitiesFriendlyName()}`} />
         <ReactTableWrapper<T>
-          ref={ this.reactTableWrapper }
-          data={ this.state.fullData }
-          columns={ this.getTableColumns() }
-          onRowClicked={ this.onRowClicked }
-          currentRow={ this.state.currentRow }
-          highlightSelectedRow={ this.state.isEditing }
-          getId={ this.getId } />
+          ref={this.reactTableWrapper}
+          data={this.state.fullData}
+          columns={this.getTableColumns()}
+          onRowClicked={this.onRowClicked}
+          currentRow={this.state.currentRow}
+          highlightSelectedRow={this.state.isEditing}
+          getId={this.getId} />
         <AddDeleteWrapper
-         isSaving={ this.state.isSaving }
-         isEditing={ this.state.isEditing }
-         onDeleteClicked={ this.onDeleteClicked }
-         onCreateClicked={ this.onCreateClicked }
-         onImagePressed= { this.onImagePressed } />
-        { this.renderCaptureUi() }
-        <div style={ { marginTop: '15px' } } className='text-center'>
+          isSaving={this.state.isSaving}
+          isEditing={this.state.isEditing}
+          onDeleteClicked={this.onDeleteClicked}
+          onCreateClicked={this.onCreateClicked}
+          onImagePressed={this.onImagePressed} />
+        {this.renderCaptureUi()}
+        <div style={{ marginTop: '15px' }} className='text-center'>
           <EditCreateWrapper
-           isEditing={ this.state.isEditing }
-           isSaving={ this.state.isSaving }
-           onEditClicked={ this.onSaveClicked }
-           onCreateClicked={ this.onSaveClicked }
-           isCurrentRowEqualToOriginal={ this.isCurrentRowEqualToOriginal() }/>
+            isEditing={this.state.isEditing}
+            isSaving={this.state.isSaving}
+            onEditClicked={this.onSaveClicked}
+            onCreateClicked={this.onSaveClicked}
+            isCurrentRowEqualToOriginal={this.isCurrentRowEqualToOriginal()} />
         </div>
       </div>
     )

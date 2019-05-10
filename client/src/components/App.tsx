@@ -5,6 +5,7 @@ import Home from './Home'
 import LoginInventario from './Inventario/loginInventario'
 import CapturaEquipoMedico from './Inventario/CapturaEquipoMedico'
 import CapturaPacientes from './Inventario/CapturaPacientes'
+import HomeInventario from './Inventario/HomeInventario'
 
 
 
@@ -19,7 +20,8 @@ const Main = () => (
   <main>
     <Switch>
       <Route exact path='/' component={ Home } />
-      <Route path='/inventario' component={ LoginInventario } />
+      <Route path='/inventario' component={ HomeInventario } />
+      <Route path='/loginInventario' component={ LoginInventario } />
       <Route path='/equipoMedico' component={ CapturaEquipoMedico } />
       <Route path='/pacientes' component={ CapturaPacientes } />
     </Switch>
