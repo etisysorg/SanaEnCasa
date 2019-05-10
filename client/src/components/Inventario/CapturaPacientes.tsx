@@ -13,7 +13,6 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
 
   constructor(props) {
     super(props)
-
   }
 
   getEntitiesFriendlyName: () => string = () => {
@@ -50,6 +49,7 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
       descripcionDelCaso: '',
       activo: false,
       fechaEgreso: '',
+      image64: ''
     }
   }
 
@@ -116,27 +116,6 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
                       isEditing={this.state.isEditing} />
                   </div>
                   <div className='col-3'>
-                    <label>Fecha Ingreso</label>
-                    <InputWrapper
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.fecha = val)}
-                      value={currentRow.fecha}
-                      maxLength={20}
-                      isClave={false}
-                      isEditing={this.state.isEditing} />
-                    <label>Fecha egreso</label>
-                    <InputWrapper
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.fechaEgreso = val)}
-                      value={currentRow.fechaEgreso}
-                      maxLength={20}
-                      isClave={false}
-                      isEditing={this.state.isEditing} />
-                    <label>Edad</label>
-                    <InputWrapperNumber
-                      value={currentRow.edad}
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.edad = val)}
-                      decimalRange={4} />
-                  </div>
-                  <div className='col-3'>
                     <label>Sexo</label>
                     <SelectInputWrapper<Sexo>
                       handleChangeInput={this.createHandleChangeInput((row, val) => row.sexo = val)}
@@ -147,20 +126,27 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
                       handleChangeInput={this.createHandleChangeInput((row, val) => row.nivelSocioeconomico = val)}
                       value={currentRow.nivelSocioeconomico}
                       optionsEnum={NivelSocioeconomico} />
-                    <label>Responsable</label>
-                    <InputWrapper
-                      handleChangeInput={this.createHandleChangeInput((row, val) => row.responsable = val)}
-                      value={currentRow.responsable}
-                      maxLength={20}
-                      isClave={false}
-                      isEditing={this.state.isEditing} />
+                    <label>Edad</label>
+                    <InputWrapperNumber
+                      value={currentRow.edad}
+                      handleChangeInput={this.createHandleChangeInput((row, val) => row.edad = val)}
+                      decimalRange={4} />
                   </div>
-                  <div className='col-3'>
+                  <div className='col-1'>
                     <div style={{ marginTop: '25px' }}>
                       <Checkbox
                         checked={currentRow.activo}
                         label='Activo'
                         onChange={this.createHandleChangeInput((row, _val) => row.activo = !currentRow.activo)} />
+                    </div>
+                  </div>
+                  <div className='col-3'>
+                    <div className='text-center'>
+                      {
+                        currentRow.image64 === '' || !currentRow.image64 ?
+                          <div>empty</div> :
+                          <img style={{ width: '500px', height: '270px', border: '3px solid #009ce0', borderRadius: '8px' }} src={currentRow.image64} />
+                      }
                     </div>
                   </div>
                 </div>
@@ -202,6 +188,29 @@ export default class CapturaPacientes extends EntityCapture<PacienteModel> {
                     <InputWrapper
                       handleChangeInput={this.createHandleChangeInput((row, val) => row.municipio = val)}
                       value={currentRow.municipio}
+                      maxLength={20}
+                      isClave={false}
+                      isEditing={this.state.isEditing} />
+                    <label>Fecha Ingreso</label>
+                    <InputWrapper
+                      handleChangeInput={this.createHandleChangeInput((row, val) => row.fecha = val)}
+                      value={currentRow.fecha}
+                      maxLength={20}
+                      isClave={false}
+                      isEditing={this.state.isEditing} />
+                  </div>
+                  <div className='col-3'>
+                    <label>Fecha egreso</label>
+                    <InputWrapper
+                      handleChangeInput={this.createHandleChangeInput((row, val) => row.fechaEgreso = val)}
+                      value={currentRow.fechaEgreso}
+                      maxLength={20}
+                      isClave={false}
+                      isEditing={this.state.isEditing} />
+                    <label>Responsable</label>
+                    <InputWrapper
+                      handleChangeInput={this.createHandleChangeInput((row, val) => row.responsable = val)}
+                      value={currentRow.responsable}
                       maxLength={20}
                       isClave={false}
                       isEditing={this.state.isEditing} />

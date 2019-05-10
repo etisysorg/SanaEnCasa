@@ -45,6 +45,7 @@ export type PacienteModel = {
     descripcionDelCaso: string,
     activo: boolean,
     fechaEgreso: string,
+    image64: string,
 }
 
 export type EquipoMedicoModel = {

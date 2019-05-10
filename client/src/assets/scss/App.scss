@@ -200,6 +200,18 @@ header.masthead {
   transition: opacity 1s, visibility 1s;
 }
 
+button {
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
 .imgWrap:hover .imgDescription {
   visibility: visible;
   opacity: 1;

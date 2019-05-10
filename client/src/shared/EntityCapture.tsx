@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Column } from 'react-table'
 import { AddDeleteWrapper } from './AddDeleteWrapper'
 import { CapturaHeader } from './CapturaHeader'
-import { EntityType } from './DataTypes'
+import { EntityType, PacienteModel } from './DataTypes'
 import { DialogMessages } from './DialogMessages'
 import { EditCreateWrapper } from './EditCreateWrapper'
 import { ReactTableWrapper } from './ReactTableWrapper'
@@ -47,7 +47,6 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
     // Intentionally not awaited
     this.getForeignFullData()
     this.restApi = new RestApi<T>(this.getEntityType())
-
     try {
       const fullData = await this.restApi.getEntities()
       this.setState({
@@ -58,6 +57,7 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
       await DialogMessages.showErrorMessage(error)
     }
   }
+
 
   onDeleteClicked = async () => {
     if (!this.state.currentRow || !this.state.fullData) {
@@ -155,6 +155,43 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
     })
   }
 
+  onImagePressed = async (event) => {
+    this.setState({ isSaving: true })
+    const rowWithImage: any = this.state.currentRow
+    const file = event.target.files[0]
+    let reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = async (e) => {
+      const image64 = e.target.result
+      rowWithImage.image64 = image64
+      const response = await fetch(`http://localhost:3000/uploadFile`, {
+        method: 'PUT',
+        body: JSON.stringify(rowWithImage),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      const newArray: T[] = []
+      for (const row of this.state.fullData) {
+        if (this.getId(row) !== this.getId(this.state.currentRow)) {
+          newArray.push(row)
+        } else {
+          newArray.push(rowWithImage)
+        }
+      }
+      this.setState({
+        isSaving: false,
+        fullData: newArray,
+      }, async () => {
+        await DialogMessages.simpleNotificationDialog('Agregado', 'success', `Se ha agregado imagen a paciente`)
+      })
+      if (response.status === 201) {
+        return await response.json()
+      }
+      throw ('Error')
+    }
+  }
+
   onRowClicked = (original: T) => {
     this.setState({
       currentRow: original,
@@ -222,7 +259,8 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
          isSaving={ this.state.isSaving }
          isEditing={ this.state.isEditing }
          onDeleteClicked={ this.onDeleteClicked }
-         onCreateClicked={ this.onCreateClicked } />
+         onCreateClicked={ this.onCreateClicked }
+         onImagePressed= { this.onImagePressed } />
         { this.renderCaptureUi() }
         <div style={ { marginTop: '15px' } } className='text-center'>
           <EditCreateWrapper
