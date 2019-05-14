@@ -53,7 +53,7 @@ export default class LoginInventario extends React.Component<Props, State> {
         event.preventDefault()
         let passHashed = this.hashString(this.state.password)
         let username = this.state.username
-        fetch(`http://localhost:3000/login/${this.state.username}/${passHashed}`)
+        fetch(`https://sana-en-casa-back.herokuapp.com/login/${this.state.username}/${passHashed}`)
             .then((response) => {
                 return response.json()
             })
@@ -68,7 +68,7 @@ export default class LoginInventario extends React.Component<Props, State> {
                         showConfirmButton: false,
                         timer: 1000
                     })
-                    location.replace('http://localhost:8080/inventario')
+                    location.replace('http://sanaencasa.org/#/inventario')
                 } else {
                     Swal.fire({
                         type: 'error',

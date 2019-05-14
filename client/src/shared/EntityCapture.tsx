@@ -46,11 +46,11 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
   async componentDidMount() {
     // Intentionally not awaited
     if (localStorage.getItem('username') === null) {
-      location.replace('http://localhost:8080/loginInventario')
+      location.replace('http://sanaencasa.org/#/loginInventario')
     }
     const username = localStorage.getItem('username')
     const password = localStorage.getItem('loggedIn')
-    const response = await fetch(`http://localhost:3000/verifyLogin/${username}/${password}`)
+    const response = await fetch(`https://sana-en-casa-back.herokuapp.com/verifyLogin/${username}/${password}`)
     const json = await response.json()
     if (json) {
       this.getForeignFullData()
@@ -65,7 +65,7 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
         await DialogMessages.showErrorMessage(error)
       }
     } else {
-      location.replace('http://localhost:8080/loginInventario')
+      location.replace('http://sanaencasa.org/#/loginInventario')
     }
   }
 
@@ -175,7 +175,7 @@ export abstract class EntityCapture<T> extends React.Component<Props, IState<T>>
     reader.onload = async (e) => {
       const image64 = e.target.result
       rowWithImage.image64 = image64
-      const response = await fetch(`http://localhost:3000/uploadFile`, {
+      const response = await fetch(`https://sana-en-casa-back.herokuapp.com/uploadFile`, {
         method: 'PUT',
         body: JSON.stringify(rowWithImage),
         headers: {

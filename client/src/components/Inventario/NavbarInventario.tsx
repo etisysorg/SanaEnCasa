@@ -28,7 +28,7 @@ export default class NavbarInventario extends React.Component<Props, State> {
         }
         const username = localStorage.getItem('username')
         const password = localStorage.getItem('loggedIn')
-        const response = await fetch(`http://localhost:3000/verifyLogin/${username}/${password}`)
+        const response = await fetch(`https://sana-en-casa-back.herokuapp.com/${username}/${password}`)
         const json = await response.json()
         await this.setState({
             loggedIn: json

@@ -20,7 +20,6 @@ You have to have node, npm and yarn installed to use this project, then...
 `npm run start-prod`
 
 * Build app once (HMR disabled)
-* App served @ `http://localhost:3000`
 
 ---
 
