@@ -80,7 +80,7 @@ export class RestApi<T> {
   }
 
   public async getEntities(): Promise<T[]> {
-    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/get`)
+    const response = await fetch(`https://sana-en-casa-back.herokuapp.com/inventario/${this.entityType}/get`)
     if (response.status === 200) {
       return await response.json()
     }
@@ -89,7 +89,7 @@ export class RestApi<T> {
   }
 
   public async addEntity(entity: T): Promise<T> {
-    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/post`, {
+    const response = await fetch(`https://sana-en-casa-back.herokuapp.com/inventario/${this.entityType}/post`, {
       method: 'POST',
       body: JSON.stringify(entity),
       headers: {
@@ -104,7 +104,7 @@ export class RestApi<T> {
   }
 
   public async editEntity(entity: T, id: string): Promise<void> {
-    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/edit`, {
+    const response = await fetch(`https://sana-en-casa-back.herokuapp.com/inventario/${this.entityType}/edit`, {
       method: 'PUT',
       body: JSON.stringify(entity),
       headers: {
@@ -119,7 +119,7 @@ export class RestApi<T> {
   }
 
   public async deleteEntity(id: string): Promise<void> {
-    const response = await fetch(`http://localhost:3000/inventario/${this.entityType}/delete`, {
+    const response = await fetch(`https://sana-en-casa-back.herokuapp.com/inventario/${this.entityType}/delete`, {
       method: 'DELETE',
       body: JSON.stringify({id: id}),
       headers: {
