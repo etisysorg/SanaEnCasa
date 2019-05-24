@@ -17,7 +17,7 @@ export default class Quehacemos extends React.Component<Props, State> {
 
     render() {
         return (
-            <div id='queHacemos'>
+            <div style={{ border: '4px dashed white' }} id='queHacemos'>
                 <div className='queHacemos text-center'>
                     <h1 className='text-center' style={{ fontFamily: 'Montserrat', color: '#009ce0', fontWeight: 'bold', paddingBottom: '15px', paddingTop: '30px' }}>QUE HACEMOS</h1>
                     <div className='row'>

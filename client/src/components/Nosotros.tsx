@@ -1,6 +1,7 @@
 import * as React from 'react'
 const logo = require('./../assets/img/logo.png')
 const mision = require('./../assets/img/mision.png')
+const videoLogo = require('./../assets/img/videoLogo.png')
 
 
 type State = {
@@ -17,7 +18,7 @@ export default class Nosotros extends React.Component<Props, State> {
 
     render() {
         return (
-            <div id='nosotros' className='nostros text-center'>
+            <div style={{ border: '4px dashed white' }} id='nosotros' className='nostros text-center'>
                 <h1 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '20px' }} className='text-center'>NOSOTROS</h1>
                 <div className='row'>
                     <div className='col-md-5'>
@@ -36,7 +37,7 @@ export default class Nosotros extends React.Component<Props, State> {
                         </h3>
                     </div>
                     <div className='col-md-4'>
-                        <a target='_blank' href='https://www.youtube.com/watch?v=XlokHSeEGKs'><span style={{ color: 'white', fontSize: '100px', paddingTop: '10px' }} className='fab fa-youtube'></span></a>
+                        <a id='imgVideo' target='_blank' href='https://www.youtube.com/watch?v=XlokHSeEGKs'><img src={ videoLogo } style={{ paddingTop: '10px', width: '150px' }}/></a>
                     </div>
                 </div>
                 <hr />

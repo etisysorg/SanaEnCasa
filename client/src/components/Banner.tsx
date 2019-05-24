@@ -16,7 +16,7 @@ export default class Banner extends React.Component<Props, State> {
 
     render() {
         return (
-            <div>
+            <div style={{ marginTop: '83px' }}>
                 <header className='masthead text-white text-center'>
                     <div className='container'>
                         <div className='overlay'></div>

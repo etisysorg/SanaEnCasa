@@ -8766,6 +8766,11 @@ react-addons-test-utils@^15.6.2:
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
   integrity sha1-wStu/cIkfBDae4dw0YUICnsEcVY=
 
+react-awesome-button@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/react-awesome-button/-/react-awesome-button-6.1.2.tgz#72402cf5e4180fa90c88fe7c1dd8970e771e412f"
+  integrity sha512-pPpuH3c1RTGoZkcLzfhQ/1PVxc56XS69mDkI8qRtRY7/cD7z+YKYFEzUk0IAg5m8l/Uwro97TqCDLvJJUMl1MQ==
+
 react-dom@^16.4.0:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.1.tgz#7f8b0223b3a5fbe205116c56deb85de32685dad6"

@@ -7,6 +7,7 @@ import Equipos from './Equipos'
 import ComoAyudar from './ComoAyudar'
 import Testimonios from './Testimonios'
 import Contacto from './Contacto'
+import NavLocation from './NavLocation'
 
 
 type State = {
@@ -24,6 +25,7 @@ export default class Home extends React.Component<Props, State> {
     render() {
         return (
             <div id='home'>
+                <NavLocation />
                 <NavbarC />
                 <Banner />
                 <Nosotros />
