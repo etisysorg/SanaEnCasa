@@ -57,18 +57,18 @@ export default class NavbarC extends React.Component<Props, State> {
                             <li className='nav-item'>
                                 <a style={{ fontFamily: 'Montserrat' }} className='navItems text-uppercase' href='#contactanos'>Contáctanos</a>
                             </li>
-                            <li className='nav-item'>
-                                <a id='aporta' style={{ padding: '4px', fontFamily: 'Montserrat', color: 'white', fontWeight: 'bold', border: '2px solid white', borderRadius: '10px' }} className='navItems text-uppercase' href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LC2UM7J6DUZBJ&source=url'><i style={{ paddingRight: '3px' }} className='fas fa-wallet'></i>Aporta</a>
-                            </li>
                             <li className='nav-item dropdown'>
                                 <a style={{ fontFamily: 'Montserrat', paddingRight: '10px' }} className='navItems text-uppercase dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown'>
                                     Boletines
                                 </a>
                                 <div className='dropdown-menu' aria-labelledby='navbarDropdown'>
                                     <a target='_blank' className='dropdown-item' href={pdf1}>SEP 2018</a>
-                                    <a target='_blank' className='dropdown-item' href={pdf2}>DIC 2018</a>
+                                    <a target='_blank' className='dropdown-item' href={pdf2}>DIC 2018 Informe Anual</a>
                                     <a target='_blank' className='dropdown-item' href={pdf3}>MARZO 2019</a>
                                 </div>
+                            </li>
+                            <li className='nav-item'>
+                                <a id='aporta' style={{ padding: '4px', fontFamily: 'Montserrat', color: 'white', fontWeight: 'bold', border: '2px solid white', borderRadius: '10px' }} className='navItems text-uppercase' href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LC2UM7J6DUZBJ&source=url'><i style={{ paddingRight: '3px' }} className='fas fa-wallet'></i>Aporta</a>
                             </li>
                         </ul>
                     </div>
