@@ -11,6 +11,7 @@ const pdf6 = require('./../assets/img/BoletinDiciembre2019.pdf')
 const pdf7 = require('./../assets/img/BoletinInformeAnual2019.pdf')
 const pdf8 = require('./../assets/img/BoletinMarzo2020.pdf')
 const pdf9 = require('./../assets/img/BoletinJunio2020.pdf')
+const pdf10 = require('./../assets/img/BoletinSeptiembre2020.pdf')
 
 type State = {
     isOpen: boolean
@@ -75,8 +76,9 @@ export default class NavbarC extends React.Component<Props, State> {
                                     <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf5 }>SEPTIEMBRE 2019</a>
                                     <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf6 }>DICIEMBRE 2019</a>
                                     <a style={{ fontSize: '14px', fontWeight: 'bold' }} target='_blank' className='dropdown-item' href={ pdf7 }>INFORME ANUAL 2019</a>
-                                    <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf7 }>MARZO 2020</a>
-                                    <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf8 }>JUNIO 2020</a>
+                                    <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf8 }>MARZO 2020</a>
+                                    <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf9 }>JUNIO 2020</a>
+                                    <a style={{ fontSize: '14px' }} target='_blank' className='dropdown-item' href={ pdf10 }>SEPTIEMBRE 2020</a>
                                 </div>
                             </li>
                             <li className='nav-item'>
