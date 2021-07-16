@@ -165,11 +165,13 @@ export default class Nosotros extends React.Component<Props, State> {
             </h2>
             <h5
               className='text-center'
-              style={{ color: 'white', lineHeight: '1.4' }}
+              style={{ color: 'white', lineHeight: '1.4',  }}
             >
-              CARIDAD para los más necesitados, SOLIDARIO ante las difíciles
-              situaciones, IGUALDAD para brindar apoyo a quien más lo necesite y
-              buscando siempre la TRASPARENCIA en sus actividades
+              SOLIDARIDAD:  Unirnos para ayudar. 
+              COMPROMISO: para lograr los objetivos. 
+              IGUALDAD:  Apoyar por sin distinciones. 
+              TRANSPARENCIA: total apertura de la información. 
+              MEJORA CONTINUA: servicio eficiente siempre innovando. 
             </h5>
           </div>
         </div>
