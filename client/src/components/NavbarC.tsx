@@ -239,7 +239,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf10}
+                    href={pdf14}
                   >
                     JULIO 2021
                   </a>
