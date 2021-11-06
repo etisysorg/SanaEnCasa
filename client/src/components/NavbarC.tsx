@@ -257,7 +257,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     borderRadius: "10px",
                   }}
                   className="navItems text-uppercase"
-                  href="#comoayudar"
+                  href="#comoAyudar"
                 >
                   <i
                     style={{ paddingRight: "3px" }}

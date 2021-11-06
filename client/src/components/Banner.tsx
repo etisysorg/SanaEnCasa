@@ -28,7 +28,7 @@ export default class Banner extends React.Component<Props, State> {
                                     <a href='#nosotros'><button style={{ fontFamily: 'Montserrat', marginTop: '10px' }} className='btnBackBlanco'>Conócenos</button></a>
                                 </div>
                                 <div className='form-group text-center'>
-                                    <a href='#comoayudar'><button style={{ fontFamily: 'Montserrat', marginTop: '10px' }} className='btnBackBlanco'>Haz una donación</button></a>
+                                    <a href='#comoAyudar'><button style={{ fontFamily: 'Montserrat', marginTop: '10px' }} className='btnBackBlanco'>Haz una donación</button></a>
                                 </div>
                             </div>
                         </div>
