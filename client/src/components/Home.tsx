@@ -32,7 +32,7 @@ export default class Home extends React.Component<Props, State> {
                 <Quehacemos/>
                 <ComoAyudar />
                 <Equipos />
-                <Testimonios/>
+                <Testimonios />
                 <Contacto/>
             </div>
         )
