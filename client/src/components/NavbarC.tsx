@@ -257,7 +257,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     borderRadius: "10px",
                   }}
                   className="navItems text-uppercase"
-                  href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LC2UM7J6DUZBJ&source=url"
+                  href="#comoayudar"
                 >
                   <i
                     style={{ paddingRight: "3px" }}

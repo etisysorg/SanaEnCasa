@@ -6,6 +6,7 @@ import LoginInventario from './Inventario/loginInventario'
 import CapturaEquipoMedico from './Inventario/CapturaEquipoMedico'
 import CapturaPacientes from './Inventario/CapturaPacientes'
 import HomeInventario from './Inventario/HomeInventario'
+import { Gracias } from './Gracias'
 
 
 
@@ -20,11 +21,12 @@ const Main = () => (
   <main>
     <HashRouter>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/inventario' component={HomeInventario} />
-        <Route path='/loginInventario' component={LoginInventario} />
-        <Route path='/equipoMedico' component={CapturaEquipoMedico} />
-        <Route path='/pacientes' component={CapturaPacientes} />
+        <Route exact path='/' component={ Home } />
+        <Route path='/inventario' component={ HomeInventario } />
+        <Route path='/loginInventario' component={ LoginInventario } />
+        <Route path='/equipoMedico' component={ CapturaEquipoMedico } />
+        <Route path='/pacientes' component={ CapturaPacientes } />
+        <Route path='/gracias' component={ Gracias } />
       </Switch>
     </HashRouter>
   </main>
