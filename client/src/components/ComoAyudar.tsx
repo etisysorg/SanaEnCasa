@@ -41,7 +41,7 @@ export default class ComoAyudar extends React.Component<Props, State> {
                 <h1 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '30px', fontWeight: 'bold', paddingBottom: '5px' }} className='text-center'>COMO AYUDAR</h1>
                 <div className='row text-center'>
                     <div className='col-md-10 mx-auto'>
-                        <h3 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '10px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'><i style={{ color: 'white' }} className='far fa-credit-card'></i> Haz un donativo único o dona mensualmente</h3>
+                        <h3 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '10px', fontWeight: 'bold', paddingBottom: '10px' }} className='text-center'><i style={{ color: 'white' }} className='far fa-credit-card'></i> Haz un donativo único o dona mensualmente con tu tarjeta de crédito</h3>
                         <div className='row text-center'>
                             <div className='col-md-5 mx-auto'>
                                 <div className='form-group text-center'>
@@ -70,7 +70,7 @@ export default class ComoAyudar extends React.Component<Props, State> {
                                         }}
                                         className='importedtoggle'
                                         onChange={ this.onDonacionMensualToggled } />
-                                    <span style={ { margin: 'auto' }}> Donación mensual { this.renderHeart() }</span>
+                                    <span style={ { margin: 'auto' }}> Convertir en donación mensual { this.renderHeart() }</span>
                                 </h5>
                                 <h6 style={{ color: 'white', fontFamily: 'Montserrat', paddingTop: '0px', fontWeight: 'bold', paddingBottom: '8px' }} className='text-center'>También puedes hacer tu donativo usando <a style={ { color: 'blue', cursor: 'pointer'} } onClick={ redirectDonarPaypal }>Paypal</a></h6>
                             </div>
