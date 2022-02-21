@@ -1,20 +1,22 @@
 import * as React from "react";
 
 const logo = require("./../assets/img/sanaEnCasaLogoNavbar.png");
-const pdf1 = require("./../assets/img/BoletinSep2018.pdf");
-const pdf2 = require("./../assets/img/BoletinDiciembre2018.pdf");
-const pdf3 = require("./../assets/img/BoletinMarzo2019.pdf");
-const pdf4 = require("./../assets/img/BoletinJunio2019.pdf");
-const pdf5 = require("./../assets/img/BoletinSeptiembre2019.pdf");
-const pdf6 = require("./../assets/img/BoletinDiciembre2019.pdf");
-const pdf7 = require("./../assets/img/BoletinInformeAnual2019.pdf");
-const pdf8 = require("./../assets/img/BoletinMarzo2020.pdf");
-const pdf9 = require("./../assets/img/BoletinJunio2020.pdf");
-const pdf10 = require("./../assets/img/BoletinSeptiembre2020.pdf");
-const pdf11 = require("./../assets/img/BoletinInformeAnual2020.pdf");
-const pdf12 = require("./../assets/img/BoletinEnMar2021.pdf");
-const pdf13 = require("./../assets/img/BoletinAbrJun2021.pdf");
-const pdf14 = require("./../assets/img/BoletinJulSep2021.pdf");
+const sep2018 = require("./../assets/img/BoletinSep2018.pdf");
+const dic2018 = require("./../assets/img/BoletinDiciembre2018.pdf");
+const mar2019 = require("./../assets/img/BoletinMarzo2019.pdf");
+const jun2019 = require("./../assets/img/BoletinJunio2019.pdf");
+const sep2019 = require("./../assets/img/BoletinSeptiembre2019.pdf");
+const dic2019 = require("./../assets/img/BoletinDiciembre2019.pdf");
+const anual2019 = require("./../assets/img/BoletinInformeAnual2019.pdf");
+const mar2020 = require("./../assets/img/BoletinMarzo2020.pdf");
+const jun2020 = require("./../assets/img/BoletinJunio2020.pdf");
+const sep2020 = require("./../assets/img/BoletinSeptiembre2020.pdf");
+const anual2020 = require("./../assets/img/BoletinInformeAnual2020.pdf");
+const mar2021 = require("./../assets/img/BoletinEnMar2021.pdf");
+const jun2021 = require("./../assets/img/BoletinAbrJun2021.pdf");
+const sep2021 = require("./../assets/img/BoletinJulSep2021.pdf");
+const dic2021 = require("./../assets/img/BoletinOctDic2021.pdf");
+const anual2021 = require("./../assets/img/BoletinInformeAnual2021.pdf");
 
 type State = {
   isOpen: boolean;
@@ -135,7 +137,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf1}
+                    href={sep2018}
                   >
                     SEP 2018
                   </a>
@@ -143,7 +145,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf2}
+                    href={dic2018}
                   >
                     DIC 2018
                   </a>
@@ -151,7 +153,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf3}
+                    href={mar2019}
                   >
                     MARZO 2019
                   </a>
@@ -159,7 +161,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf4}
+                    href={jun2019}
                   >
                     JUNIO 2019
                   </a>
@@ -167,7 +169,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf5}
+                    href={sep2019}
                   >
                     SEPTIEMBRE 2019
                   </a>
@@ -175,7 +177,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf6}
+                    href={dic2019}
                   >
                     DICIEMBRE 2019
                   </a>
@@ -183,7 +185,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px", fontWeight: "bold" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf7}
+                    href={anual2019}
                   >
                     INFORME ANUAL 2019
                   </a>
@@ -191,7 +193,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf8}
+                    href={mar2020}
                   >
                     MARZO 2020
                   </a>
@@ -199,7 +201,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf9}
+                    href={jun2020}
                   >
                     JUNIO 2020
                   </a>
@@ -207,7 +209,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf10}
+                    href={sep2020}
                   >
                     SEPTIEMBRE 2020
                   </a>
@@ -215,7 +217,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px", fontWeight: "bold" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf11}
+                    href={anual2020}
                   >
                     INFORME ANUAL 2020
                   </a>
@@ -223,7 +225,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf12}
+                    href={mar2021}
                   >
                     ENERO 2021
                   </a>
@@ -231,7 +233,7 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf13}
+                    href={jun2021}
                   >
                     ABRIL 2021
                   </a>
@@ -239,9 +241,25 @@ export default class NavbarC extends React.Component<Props, State> {
                     style={{ fontSize: "14px" }}
                     target="_blank"
                     className="dropdown-item"
-                    href={pdf14}
+                    href={sep2021}
                   >
                     JULIO 2021
+                  </a>
+                  <a
+                    style={{ fontSize: "14px" }}
+                    target="_blank"
+                    className="dropdown-item"
+                    href={dic2021}
+                  >
+                    DIC 2021
+                  </a>
+                  <a
+                    style={{ fontSize: "14px", fontWeight: "bold" }}
+                    target="_blank"
+                    className="dropdown-item"
+                    href={anual2021}
+                  >
+                    INFORME ANUAL 2021
                   </a>
                 </div>
               </li>
