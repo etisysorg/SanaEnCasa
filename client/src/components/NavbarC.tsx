@@ -17,6 +17,7 @@ const jun2021 = require("./../assets/img/BoletinAbrJun2021.pdf");
 const sep2021 = require("./../assets/img/BoletinJulSep2021.pdf");
 const dic2021 = require("./../assets/img/BoletinOctDic2021.pdf");
 const anual2021 = require("./../assets/img/BoletinInformeAnual2021.pdf");
+const ene2022 = require("./../assets/img/BoletinEnero2022.pdf");
 
 type State = {
   isOpen: boolean;
@@ -260,6 +261,14 @@ export default class NavbarC extends React.Component<Props, State> {
                     href={anual2021}
                   >
                     INFORME ANUAL 2021
+                  </a>
+                  <a
+                    style={{ fontSize: "14px" }}
+                    target="_blank"
+                    className="dropdown-item"
+                    href={ene2022}
+                  >
+                    ENE 2022
                   </a>
                 </div>
               </li>
